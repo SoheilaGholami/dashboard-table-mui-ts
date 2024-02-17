@@ -40,8 +40,6 @@ export default function DashboardTable() {
 
   useEffect(() => {
     async function fetchData() {
-      console.log(pageIndex);
-
       const { data } = await axios.get(
         `https://rickandmortyapi.com/api/character/?page=${pageIndex}`
       );
@@ -63,7 +61,7 @@ export default function DashboardTable() {
                 <TableCell align="right">Gender</TableCell>
                 <TableCell align="right">Status</TableCell>
                 <TableCell align="right">Name Of Character</TableCell>
-                <TableCell align="right">Image</TableCell>
+                <TableCell align="left">Image</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -82,7 +80,7 @@ export default function DashboardTable() {
                   <TableCell align="right">{row.status}</TableCell>
                   <TableCell align="right">{row.name}</TableCell>
                   <TableCell align="right">
-                    <Avatar src={row.image} alt="" />
+                    <Avatar src={row.image} alt={row.name} />
                   </TableCell>
                 </TableRow>
               ))}

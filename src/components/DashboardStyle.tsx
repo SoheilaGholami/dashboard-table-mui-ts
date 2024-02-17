@@ -12,7 +12,7 @@ export const Content = styled("main")(({ theme }) => ({
   padding: theme.spacing(2),
   [theme.breakpoints.up("sm")]: {
     width: `calc(100% - ${drawerWidth}px)`,
-    marginRight: `${drawerWidth}`,
+    marginRight: `${drawerWidth}px`,
   },
 }));
 

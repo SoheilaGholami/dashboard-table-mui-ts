@@ -13,11 +13,16 @@ const MainDrawer = ({ mobileOpen, setMobileOpen }: MainDrawerProps) => {
       <Hidden smUp>
         {mobileOpen && (
           <Drawer
-            variant="temporary"
             anchor="right"
             open={mobileOpen}
             onClose={() => setMobileOpen(!mobileOpen)}
-            PaperProps={{ sx: { width: 240, paddingTop: "10px !important" } }}
+            PaperProps={{
+              sx: {
+                width: 240,
+                paddingTop: "10px !important",
+                transition: "all 1s",
+              },
+            }}
           >
             <Box paddingX={2} component="span">
               <Typography variant="h5">Dashboard</Typography>

@@ -1,4 +1,4 @@
-import { Dashboard, SupervisedUserCircle } from "@mui/icons-material";
+import { SupervisedUserCircle } from "@mui/icons-material";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 
 const navList = [
